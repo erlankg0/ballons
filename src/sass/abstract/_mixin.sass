@@ -1,0 +1,25 @@
+// mixin style
+@mixin style-link($color)
+    display: inline-block
+    text-transform: uppercase
+    text-decoration: none
+    color: $color
+@mixin styleAfterContent($color)
+    content: ''
+    background-color: $color
+    width: 100%
+    height: 100%
+    border-radius: 5rem
+    display: inline-block
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    transition: all .4s
+
+@mixin crearFix
+    &::after
+        content: ""
+        display: table
+        clear: both
+    

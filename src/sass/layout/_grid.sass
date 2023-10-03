@@ -1,0 +1,20 @@
+.row
+    max-width: $grid-max-width
+    margin: 0 auto
+    margin-bottom: $margin-bottom-big
+    @include crearFix
+    &:last-child
+        margin-bottom: 0rem
+
+.col-1-of-2
+    width: calc((100% - #{$gutten-horizontal}) / 2)
+
+.col-1-of-3
+    width: calc((100% - 2 * #{$gutten-horizontal}) / 3)
+.col-2-of-3
+    width: calc(2 * ((100% - 2 * #{$gutten-horizontal}) / 3))
+
+[class^='col-1']
+    float: left
+    &:not(&:last-child)
+        margin-right: $gutten-horizontal

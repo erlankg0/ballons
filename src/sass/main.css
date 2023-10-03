@@ -1,0 +1,247 @@
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes BtnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  background-color: #f7f7f7;
+  width: 100%;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  color: #777;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  background-color: white;
+  padding: 5rem;
+}
+
+.title-first {
+  color: #fff;
+}
+.title-first__main {
+  display: block;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: leftToRight;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+}
+.title-first__secondary {
+  font-weight: 200;
+  font-size: 3.8rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 6.5rem;
+}
+
+.title-secondary {
+  display: inline-block;
+  font-size: 3.6rem;
+  font-weight: 800;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 93%);
+  -webkit-background-clip: text;
+  color: transparent;
+  backface-visibility: hidden;
+  transition: all 0.4s;
+}
+.title-secondary:hover {
+  transform: skewY(2deg) skewX(4deg);
+  text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+.title_third {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  line-height: 1.4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin_bottom-1 {
+  margin-bottom: 1rem;
+}
+
+.margin_bottom-3 {
+  margin-bottom: 3rem;
+}
+
+.margin_bottom-5 {
+  margin-bottom: 5rem;
+}
+
+.margin_bottom-8 {
+  margin-bottom: 8rem;
+}
+
+.btn:link, .btn:visited {
+  padding: 1rem 2.5rem;
+  background-color: #fff;
+  border-radius: 5rem;
+  font-size: 2rem;
+  transition: all 0.35s;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777;
+}
+.btn:hover {
+  transform: translateY(-0.04rem);
+  box-shadow: 0rem 0.04rem 0.04rem rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.6) scaleY(1.7);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-0.02rem);
+  box-shadow: 0rem 0.04rem 0.04rem rgba(0, 0, 0, 0.2);
+}
+.btn::after {
+  content: "";
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn_animated {
+  animation: BtnToUp 0.7s ease 0.7;
+  animation-fill-mode: backwards;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #A14F03;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid #777;
+  display: inline-block;
+}
+.btn-text:hover {
+  background-color: #ba8554;
+  color: #fff;
+  transform: translateY(-0.2rem);
+  box-shadow: 0rem 0.04rem 0.04rem rgba(0, 0, 0, 0.2);
+}
+.btn-text:active {
+  transform: translateY(0rem);
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: url(../img/header-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.header__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 100%;
+  text-align: center;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row:last-child {
+  margin-bottom: 0rem;
+}
+
+.col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.col-2-of-3 {
+  width: calc(2 * (100% - 2 * 6rem) / 3);
+}
+
+[class^=col-1] {
+  float: left;
+}
+[class^=col-1]:not([class^=col-1]:last-child) {
+  margin-right: 6rem;
+}
+
+.section_about {
+  padding-top: 8rem;
+}/*# sourceMappingURL=main.css.map */

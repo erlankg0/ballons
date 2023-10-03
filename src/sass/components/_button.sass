@@ -1,0 +1,26 @@
+// стили кнопки
+.btn
+    &:link,&:visited
+        padding: 1rem 2.5rem
+        background-color: $color-white
+        border-radius: 5rem
+        font-size: 2rem
+        transition: all .35s
+        position: relative
+        @include style-link($color-gray)
+
+    &:hover
+        transform: translateY(-.04rem)
+        box-shadow: $btn-box-shadow
+        &::after
+            transform: scaleX(1.6) scaleY(1.7)
+            opacity: 0
+    &:active
+        transform: translateY(-.02rem)
+        box-shadow: $btn-box-shadow
+    &::after
+        @include styleAfterContent($color:$color-white)
+
+.btn_animated
+    animation: BtnToUp .7s ease .7
+    animation-fill-mode: backwards

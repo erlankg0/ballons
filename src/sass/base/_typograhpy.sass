@@ -1,0 +1,62 @@
+
+body
+    font-family: 'Roboto'
+    font-weight: 400
+    color: $color-gray
+    font-size: $font-paragraph
+    letter-spacing: .2rem
+    background-color: white
+    padding: 5rem
+
+.title-first
+
+    color: $color-white
+
+    &__main
+        display: block
+        font-weight: 800
+        font-size: 5rem
+        line-height: 6rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        margin-bottom: 1rem
+        animation: leftToRight
+        animation-duration: 3s
+        animation-timing-function: ease
+
+    &__secondary
+        font-weight: 200
+        font-size: 3.8rem
+        line-height: 4.8rem
+        letter-spacing: .05rem
+
+        margin-bottom: 6.5rem
+
+.title-secondary
+    display: inline-block
+    font-size: 3.6rem
+    font-weight: 800
+    letter-spacing: 1rem
+    text-transform: uppercase
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 93%)
+    -webkit-background-clip: text
+    color: transparent
+    backface-visibility: hidden
+    // padding: 2rem
+    transition: all .4s
+    // border: 1rem dashed red
+    &:hover
+        transform: skewY(2deg) skewX(4deg)
+        text-shadow: 0rem .4rem .4rem rgba($color-black, .25)
+
+.title_third
+    font-size: 2rem
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 700
+
+.paragraph
+    font-size: $font-paragraph
+    font-weight: 400
+    letter-spacing: .2rem
+    line-height: 1.4
