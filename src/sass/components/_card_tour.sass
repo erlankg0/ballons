@@ -1,0 +1,23 @@
+.cart_tour
+    height: 50rem
+    transition: all 1s
+    perspective: 150rem
+    -moz-perspective: 150rem
+
+    &__side
+        height: 50rem
+        transition: 1s all
+        color: white  // Исправление: заменен $color-white на white
+
+        &.card_tour__side_front
+            background-color: red
+
+        &.card_tour__side_back
+            background-color: green
+            transform: rotateY(180deg)
+
+    &:hover .card_tour__side_front
+        transform: rotateY(180deg)
+
+    &:hover .card_tour__side_back
+        transform: rotateY(0)
